@@ -242,19 +242,29 @@ function Dashboard() {
       }
     )
 
+    console.log("ORDER DATA:", order.data)
+
     const options = {
 
       key: import.meta.env.VITE_RAZORPAY_KEY_ID,
 
       amount: order.data.amount,
 
-      currency: "INR",
+      currency: order.data.currency,
 
       name: "Pepper Wallet",
 
       description: "Wallet Deposit",
 
-      order_id: order.data.oder_id,
+      order_id: order.data.order_id
+
+    }
+
+    console.log("RAZORPAY OPTIONS:", options)
+
+    const razorpay = new window.Razorpay({
+
+      ...options,
 
       handler: async function(response) {
 
@@ -280,15 +290,12 @@ function Dashboard() {
         loadHistory()
 
       }
-      
-      }
-    const razorpay = new window.Razorpay(
-      options
-    )
+
+    })
 
     razorpay.open()
 
-  }
+  
 
   return (
 
