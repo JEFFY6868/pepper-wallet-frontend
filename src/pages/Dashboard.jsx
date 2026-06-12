@@ -300,7 +300,7 @@ function Dashboard() {
 
     razorpay.open()
 
-  
+}
 
   return (
 
