@@ -1,0 +1,2 @@
+(venv) jeffy@pop-os:~/pepper_phase1/pepper_wallet/frontend$ npm run dev -- --hostname 0.0.0.0
+
