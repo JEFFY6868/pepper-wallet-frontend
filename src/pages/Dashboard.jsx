@@ -254,7 +254,7 @@ function Dashboard() {
 
       description: "Wallet Deposit",
 
-      order_id: order.data.oder.id,
+      order_id: order.data.oder_id,
 
       handler: async function(response) {
 
