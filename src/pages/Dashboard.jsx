@@ -236,7 +236,7 @@ function Dashboard() {
     }
     
     const order = await API.post(
-      "api//create-order",
+      "/api/create-order",
       {
         amount: Number(amount)
       }
