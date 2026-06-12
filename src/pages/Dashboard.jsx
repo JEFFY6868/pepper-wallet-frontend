@@ -236,7 +236,7 @@ function Dashboard() {
     }
     
     const order = await API.post(
-      "/create-order",
+      "api//create-order",
       {
         amount: Number(amount)
       }
@@ -244,7 +244,7 @@ function Dashboard() {
 
     const options = {
 
-      key: "rzp_test_T0EwnfpZqVk8JR",
+      key: import.meta.env.VITE_RAZORPAY_KEY_ID,
 
       amount: order.data.amount,
 
@@ -254,7 +254,7 @@ function Dashboard() {
 
       description: "Wallet Deposit",
 
-      order_id: order.data.id,
+      order_id: order.data.oder.id,
 
       handler: async function(response) {
 
