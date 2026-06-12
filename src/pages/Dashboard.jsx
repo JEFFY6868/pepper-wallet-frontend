@@ -224,7 +224,9 @@ function Dashboard() {
   }
   
   const payWithRazorpay = async () => {
-
+    
+    alert("PAY BUTTON CLICKED")
+    
     if (!amount || Number(amount) <= 0) {
 
       alert(
